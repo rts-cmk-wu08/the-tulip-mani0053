@@ -1,6 +1,5 @@
 import './App.css';
 import Hero from './componets/Hero';
-import Herocss from './componets/Hero.css'
 
 
     

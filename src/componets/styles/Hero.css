@@ -1,0 +1,56 @@
+.hero{
+    max-width: 1446px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.herowrapper{
+    grid-area: 1 / 1;
+    padding: 0 163px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.heroimg{
+    grid-area: 1 / 1;
+}
+
+ul{
+    list-style-type: none;
+}
+.heroli{
+    grid-area: 1 / 1 / 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.navi{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    color:white;
+}
+.some{
+    display: flex;
+    justify-content: end;
+    padding: 20px 0px;
+}
+.some li{
+    margin: 0px 10px;
+    background-color:#0083CA;
+    color: white;
+    padding: 4px;
+    border-radius: 50%;
+}
+h1{
+    color: white;
+    font-size: 64px;
+}
+.logotulip{
+    width: 319px;
+}
+.bookbtn{
+    background-color: #F47920;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 10px;
+}

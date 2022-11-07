@@ -6,6 +6,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { BsYoutube } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
+import "./styles/Hero.css";
 
 const Hero = () => {
   const [loading, setLoading] = useState(true);
@@ -28,25 +29,27 @@ const Hero = () => {
           <div className="heroimg">
             <img src={hero.image} alt="" />
           </div>
-          <div className="heroli">
-            <ul>
-              <li>Home</li>
-              <li>Rooms & Suites</li>
-              <li>Services</li>
-              <li>About US</li>
-              <li>Booking</li>
-            </ul>
-            <ul>
-              <li><AiOutlineInstagram /></li>
-              <li><AiOutlineFacebook /></li>
-              <li><BsYoutube /></li>
-              <li><BsTwitter /></li>
-            </ul>
-          </div>
+          <div className="herowrapper">
+               <nav className="heroli">
+                 <ul className="navi">
+                    <li>Home</li>
+                    <li>Rooms  &  Suites</li>
+                    <li>Services</li>
+                    <li>About US</li>
+                    <li>Booking</li>
+                 </ul>
+                 <ul className="some">
+                    <a href="#"><li><AiOutlineInstagram /></li></a>
+                    <a href="#"><li><AiOutlineFacebook /></li></a>
+                    <a href="#"><li><BsYoutube /></li></a>
+                    <a href="#"><li><BsTwitter /></li></a>
+                  </ul>
+                </nav>
           <div className="herotext">
-            <img src={tulip} alt="" />
+            <img className="logotulip" src={tulip} alt="" />
             <h1>{hero.headline}</h1>
-            <a href="#">hej</a>
+            <a className="bookbtn" href="#">Book Now</a>
+          </div>
           </div>
         </>
       )}

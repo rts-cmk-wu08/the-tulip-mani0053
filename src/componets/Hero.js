@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-//import Herocss from './componets/Hero.css'
 import tulip from "../thetuliplogo.svg";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiOutlineFacebook } from "react-icons/ai";

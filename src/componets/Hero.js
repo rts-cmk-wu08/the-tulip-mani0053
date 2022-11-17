@@ -46,7 +46,7 @@ const Hero = () => {
                 </nav>
           <div className="herotext">
             <img className="logotulip" src={tulip} alt="" />
-            <h1>{hero.headline}</h1>
+            <h1 className="heroh1">{hero.headline}</h1>
             <a className="bookbtn" href="#">Book Now</a>
           </div>
           </div>

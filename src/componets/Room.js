@@ -1,50 +1,36 @@
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { useEffect } from "react";
 import "./styles/Room.css";
-
-
 
 const Room = () => {
     const [loading, setLoading] = useState (true);
     const [error, setError] = useState();
-    const [hero, setHero] = useState();
+    const [room, setRoom] = useState();
 
     useEffect(() => {
-        axios("http://localhost:4000/hero")
-        .then((response) => setHero(response.data))
+        axios("http://localhost:4000/room")
+        .then((response) => setRoom(response.data))
         .catch(() => setError("Something went wrong"))
         .finally(() => setLoading(false));
     }, []);
+
     return (
-        <div>
+        <div className="room">
         {loading && <p>Loading...</p>}
         {error && <p>{error}</p>}
-        {!error && hero && (
+        {!error && room && (
             <>
-              <div className="heroimg">
-                <img src={hero.image} alt="" />
-              </div>
-              <div className="herowrapper">
-                   <nav className="heroli">
-                     <ul className="navi">
-                        <li>Home</li>
-                        <li>Rooms  &  Suites</li>
-                        <li>Services</li>
-                        <li>About US</li>
-                        <li>Booking</li>
-                     </ul>
-                     <ul className="some">
-                        <a href="#"><li><AiOutlineInstagram /></li></a>
-                        <a href="#"><li><AiOutlineFacebook /></li></a>
-                        <a href="#"><li><BsYoutube /></li></a>
-                        <a href="#"><li><BsTwitter /></li></a>
-                      </ul>
-                    </nav>
-              <div className="herotext">
-                <img className="logotulip" src={tulip} alt="" />
-                <h1>{hero.headline}</h1>
-                <a className="bookbtn" href="#">Book Now</a>
-              </div>
+              <div className="roomwrapper">
+                 <div>
+                  <p>{roomtypes.type}</p>
+                 
+                 </div>
+                 <div>
+
+                 </div>
+                 <div>
+
+                 </div>
               </div>
             </>
           )}
